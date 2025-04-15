@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Market Frio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .topbar {
+      background-color: #0a2b5a;
+      color: white;
+      padding: 5px 15px;
+      font-size: 14px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007BFF;
+    }
+
+    .contact-info {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      font-size: 16.5px;
+    }
+
+    .contact-info span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: bold;
+      color: #0a2b5a;
+    }
+
+    nav {
+      background-color: #0a2b5a;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .hero {
+      background-image: url('imagenes/background.png'); /* Usa la ruta relativa */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(10, 43, 90, 0.7);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 32px;
+      z-index: 1;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      background: white;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .review {
+      max-width: 500px;
+      margin: auto;
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      font-style: italic;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+      max-width: 960px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .carousel-track {
+      display: flex;
+      animation: scroll-carousel 25s linear infinite;
+      gap: 10px;
+    }
+
+    .carousel-track img {
+      width: 300px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+      border: 2px solid #007BFF;
+    }
+
+    @keyframes scroll-carousel {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .carousel-container:hover .carousel-track {
+      animation-play-state: paused;
+    }
+
+    /* Reseñas con 3 visibles a la vez */
+    .reseña-slider {
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .reseñas-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .reseña {
+      flex: 0 0 33.3333%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .reseña p {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      font-style: italic;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 768px) {
+      .reseña {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    📌 El mejor servicio técnico en refrigeración y climatización
+  </div>
+
+  <div class="header">
+    <img src="Logo.png" alt="Logo Market Frio" style="height: 85px;" />
+    <div class="contact-info">
+      <span>📞 +56 9 2611 8369</span>
+      <span>📧 inv.serv.marketfrio@gmail.com</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
+    <a href="#reseñas">Reseñas</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Soluciones confiables en refrigeración, calefacción y equipos gastronómicos</h2>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://www.tecsup.edu.pe/wp-content/uploads/2024/03/refrigeracion-aire-acondicionado-banner-secundario.jpg" alt="Refrigeración" />
+        <h3>Refrigeración</h3>
+        <p>Reparación y mantenimiento de cámaras, vitrinas y equipos.</p>
+      </div>
+      <div class="card">
+        <img src="https://watiofy.com/info/wp-content/uploads/tipos-calefaccion.jpg" alt="Calefacción" />
+        <h3>Calefacción</h3>
+        <p>Instalación y reparación de sistemas de calefacción para locales y hogares.</p>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq1ByndF-TLUQ53f6AwL8TkzVUmpIlq5bXTNkKNGFlVDjIze5hEZ7_C-vXCPO8sGk_-v4&usqp=CAU" alt="Gastronómicos" />
+        <h3>Equipos Gastronómicos</h3>
+        <p>Servicios técnicos para hornos, freidoras, planchas y más.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="imagenes/galeria/img1.jpg" alt="Trabajo 1" />
+        <img src="imagenes/galeria/img2.jpg" alt="Trabajo 2" />
+        <img src="imagenes/galeria/img3.jpg" alt="Trabajo 3" />
+        <img src="imagenes/galeria/img4.jpg" alt="Trabajo 4" />
+        <img src="imagenes/galeria/img5.jpg" alt="Trabajo 5" />
+        <img src="imagenes/galeria/img6.jpg" alt="Trabajo 6" />
+      </div>
+    </div>
+  </section>
+
+  <section id="reseñas">
+    <h2>Reseñas</h2>
+    <div class="reseña-slider">
+      <div class="reseñas-track" id="reseñasTrack">
+        <div class="reseña"><p>★★★★★<br>“Excelente servicio, rápido y confiable. ¡Muy recomendable!”<br><strong>- Cliente satisfecho</strong></p></div>
+        <div class="reseña"><p>★★★★★<br>“Muy profesionales, solucionaron el problema en menos de un día.”<br><strong>- Juan P.</strong></p></div>
+        <div class="reseña"><p>★★★★☆<br>“Buen trato, volveré a contratarlos para mis otros equipos.”<br><strong>- Ana M.</strong></p></div>
+        <div class="reseña"><p>★★★★★<br>“Servicio técnico confiable y a buen precio.”<br><strong>- Carlos R.</strong></p></div>
+        <div class="reseña"><p>★★★★★<br>“Increíble servicio, aunque se complicó pudieron resolverlo.”<br><strong>- Santiago A.</strong></p></div>
+        <div class="reseña"><p>★★★☆☆<br>“Gran trabajo.”<br><strong>- Hector G.</strong></p></div>
+        <div class="reseña"><p>★★★★☆<br>“Un poco demorado pero buen resultado.”<br><strong>- Gustavo T.</strong></p></div>
+      </div>
+    </div>
+  </section>
+
+  <a class="whatsapp-button" href="https://wa.me/56926118369?text=Hola%20quiero%20pedir%20un%20servicio%20de%20Market%20Frio" target="_blank" title="Escríbenos por WhatsApp">
+    💬
+  </a>
+
+  <script>
+    let currentSlide = 0;
+    const reseñasTrack = document.getElementById('reseñasTrack');
+    const totalReseñas = reseñasTrack.children.length;
+    const itemsPerSlide = window.innerWidth < 768 ? 1 : 3;
+
+    function updateSlider() {
+      const slideWidth = reseñasTrack.offsetWidth / totalReseñas;
+      const offset = currentSlide * (100 / totalReseñas) * itemsPerSlide;
+      reseñasTrack.style.transform = `translateX(-${offset}%)`;
+    }
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % Math.ceil(totalReseñas / itemsPerSlide);
+      updateSlider();
+    }, 4000);
+  </script>
+
+</body>
+</html>
